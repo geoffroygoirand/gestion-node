@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Nav from './Nav.ejs'
 
 function App() {
   return (
+    <Nav />
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -15,7 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Bienvenue dans l'application de gestion !
         </a>
       </header>
     </div>
