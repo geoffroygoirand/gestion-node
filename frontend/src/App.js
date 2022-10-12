@@ -23,23 +23,44 @@ import {
 
 function App() {
   return (
-    <Nav />
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Bienvenue dans l'application de gestion !
-        </a>
-      </header>
-    </div></>
+    <div style={{ backgroundColor: "black" }}>
+    <Container style={{ color: "white" }} >
+      <Nav>
+        <span className="navbar-brand">
+          <img
+            src="../images/logo.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />
+        </span>
+        <NavItem>
+          <NavLink href="/" className="nav-link-text">
+            Last Releases
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink>
+            <Button type="button" id="popOverWishList" onClick={toggle}>
+              {wishListDb.length} films
+            </Button>
+            <Popover
+              placement="bottom"
+              isOpen={isOpenedPopover}
+              target="popOverWishList"
+            >
+              <PopoverHeader>Wishlist</PopoverHeader>
+              <PopoverBody>{wishListDbStyled}</PopoverBody>
+            </Popover>
+          </NavLink>
+        </NavItem>
+      </Nav>
+    </Container>
+    <br />
+    <Container>
+     <Banner />
+    </Container>
+  </div>
   );
 }
 
