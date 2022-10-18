@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Nav from './Nav.js'
+import Banner from './Banner.js'
 
 import "bootstrap/dist/css/bootstrap.min.css";
 //Import FontAwesome for icons
@@ -36,22 +36,14 @@ function App() {
         </span>
         <NavItem>
           <NavLink href="/" className="nav-link-text">
-            Last Releases
+            Nos derniers chiffres
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink>
             <Button type="button" id="popOverWishList" onClick={toggle}>
-              {wishListDb.length} films
+              Nos clients
             </Button>
-            <Popover
-              placement="bottom"
-              isOpen={isOpenedPopover}
-              target="popOverWishList"
-            >
-              <PopoverHeader>Wishlist</PopoverHeader>
-              <PopoverBody>{wishListDbStyled}</PopoverBody>
-            </Popover>
           </NavLink>
         </NavItem>
       </Nav>
